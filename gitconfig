@@ -1,3 +1,7 @@
+[core]
+  safecrlf = true
+  autocrlf = input
+  pager = "less -X"
 [alias]
   cp = "cherry-pick"
   dc = "diff --cached"
@@ -9,5 +13,8 @@
   up = !"git pull"
 [format]
   pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
+[color]
+  ui = auto
+  pager = true
 [core]
-        excludefile = $HOME/.gitignore_global
+  excludefile = $HOME/.gitignore_global
