@@ -1,0 +1,13 @@
+[alias]
+  cp = "cherry-pick"
+  dc = "diff --cached"
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  unpushed = !"git log @{upstream}..HEAD"
+  up = !"git pull"
+[format]
+  pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
+[core]
+        excludefile = $HOME/.gitignore_global
