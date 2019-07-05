@@ -1,7 +1,3 @@
-[core]
-  safecrlf = true
-  autocrlf = input
-  pager = "less -X"
 [alias]
   cp = "cherry-pick"
   dc = "diff --cached"
@@ -18,3 +14,6 @@
   pager = true
 [core]
   excludefile = $HOME/.gitignore_global
+  safecrlf = true
+  autocrlf = input
+  pager = "less -X"

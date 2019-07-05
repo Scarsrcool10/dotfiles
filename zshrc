@@ -2,7 +2,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 eval "$(rbenv init -)"
 
-source ~/.aliases
+source ~/.pub_aliases
+source ~/.priv_aliases
 source ~/.exports
 source ~/.gitconfig
 

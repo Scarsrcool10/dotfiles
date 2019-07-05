@@ -1,0 +1,17 @@
+# Best Aliases
+alias gst='git status'
+alias b='bundle exec'
+alias bcap='bundle exec cap'
+alias brake='bundle exec rake'
+alias brails='bundle exec rails'
+alias bil='bundle install --path vendor/bundle'
+alias up='git pull'
+alias glo='git log'
+alias autocop='bundle exec rake rubocop:lint_unpushed:auto_correct'
+alias mysql='bundle exec rake mysql'
+alias mysqla='bundle exec rake mysql\[-A\]'
+alias tdsd='td && sd'
+
+# SHELL
+alias ll='ls -lah'
+alias reload='exec $SHELL -l'
