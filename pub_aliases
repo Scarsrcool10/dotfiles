@@ -11,6 +11,7 @@ alias autocop='bundle exec rake rubocop:lint_unpushed:auto_correct'
 alias mysql='bundle exec rake mysql'
 alias mysqla='bundle exec rake mysql\[-A\]'
 alias tdsd='td && sd'
+alias dot=' cd $HOME/dev/dotfiles'
 
 # SHELL
 alias ll='ls -lah'
