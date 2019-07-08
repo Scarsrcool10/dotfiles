@@ -13,6 +13,7 @@ alias msa='bundle exec rake mysql\[-A\]'
 alias tdsd='td && sd'
 alias dot=' cd ~/dev/dotfiles'
 alias dock=' cd ~/dev/onyx_docker'
+alias dock=' cd ~/dev/onyx_docker'
 
 # SHELL
 alias ll='ls -lah'
