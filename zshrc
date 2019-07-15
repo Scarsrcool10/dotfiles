@@ -5,7 +5,6 @@ eval "$(rbenv init -)"
 source ~/.pub_aliases
 source ~/.priv_aliases
 source ~/.exports
-source ~/.gitconfig
 
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
