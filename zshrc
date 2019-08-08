@@ -2,10 +2,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 eval "$(rbenv init -)"
 
-source ~/.pub_aliases
-source ~/.priv_aliases
-source ~/.exports
-
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
@@ -113,3 +109,7 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+source ~/.pub_aliases
+source ~/.priv_aliases
+source ~/.exports
