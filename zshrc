@@ -113,3 +113,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.pub_aliases
 source ~/.priv_aliases
 source ~/.exports
+source ~/.pryrc
