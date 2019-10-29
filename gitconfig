@@ -17,3 +17,6 @@
   safecrlf = true
   autocrlf = input
   pager = "less -X"
+[user]
+	name = Jon C
+	email = jon.cleghorn@coxautoinc.com
