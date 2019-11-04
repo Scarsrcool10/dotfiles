@@ -4,6 +4,7 @@ To utilize these awesomesauce dotfiles, do the following.
 
 1. clone down this repo at `$HOME/dev/`
 2. run `make_syms` to build all the symlinks correctly.
+3. install your own oh-my-zsh theme, or run the powerline10k one installed here with `p10k configure`
 
 What does this get you? oh baby, lots of stuff!.
 
