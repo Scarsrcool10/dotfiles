@@ -14,3 +14,8 @@ if [ ! `command -v pry` ]; then
   echo "PRY not found. Installing now"
   gem install pry
 fi
+
+if [ ! `command -v geckodriver` ]; then
+  echo "GEKODRIVER not found. Installing now."
+  brew install geckodriver
+fi
