@@ -18,4 +18,5 @@ fi
 if [ ! `command -v geckodriver` ]; then
   echo "GEKODRIVER not found. Installing now."
   brew install geckodriver
+
 fi
