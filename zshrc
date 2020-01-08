@@ -5,6 +5,7 @@ eval "$(rbenv init -)"
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
+export PATH="/usr/local/bin/mine:$PATH"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
