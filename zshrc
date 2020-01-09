@@ -114,6 +114,5 @@ source $ZSH/oh-my-zsh.sh
 source ~/.pub_aliases
 source ~/.priv_aliases
 source ~/.exports
-source ~/.pryrc
 source $HOME/dev/dotfiles/hooks/pre-up/oh-my-zsh.sh
 source $HOME/dev/dotfiles/hooks/post-up/make_rc_files.sh #run `make_syms` to build all the symlinked files correctly
