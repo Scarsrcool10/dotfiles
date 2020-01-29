@@ -16,6 +16,7 @@ alias dock=' cd ~/dev/onyx_docker'
 alias dock=' cd ~/dev/onyx_docker'
 alias dup='docker-compose up -d'
 alias ddown='docker-compose down'
+alias ami=' cd ~/dev/ami-builder'
 
 # SHELL
 alias ll='ls -lah'
