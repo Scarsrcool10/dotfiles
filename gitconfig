@@ -13,7 +13,7 @@
   ui = auto
   pager = true
 [core]
-  excludefile = $HOME/.gitignore_global
+	excludesfile = /Users/jcleghorn/.gitignore_global
   safecrlf = true
   autocrlf = input
   pager = "less -X"
