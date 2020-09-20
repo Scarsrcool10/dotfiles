@@ -16,6 +16,10 @@ alias dock=' cd ~/dev/onyx_docker'
 alias dup='docker-compose up -d'
 alias ddown='docker-compose down'
 alias ami=' cd ~/dev/ami-builder'
+alias resettestdb="DATASET=sample_data SCHEMA=db/structure.sql RAILS_ENV=test bundle exec rails db:reset"
+alias testserver="RAILS_ENV=test DISABLE_ONE_SEARCH_ASSET_LOAD=true SKIP_LOCAL_CACHE=true ENABLE_ALL_STUBS=true USE_MOCK_CACHE=false ENABLE_CACHER=true LOG_LEVEL=debug bundle exec rails server"
+alias overspec="USE_MOCK_CACHE=false ENABLE_CACHER=true RAILS_ENV=test SAVE_FAILURE_SCREENSHOTS=true DISABLE_PROFILING=true bundle exec rspec -fd"
+alias poosh="prepushhook"
 
 # SHELL
 alias ll='ls -lah'
