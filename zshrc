@@ -121,3 +121,19 @@ source ~/.exports
 source $HOME/dev/dotfiles/priv_functions.sh
 source $HOME/dev/dotfiles/hooks/pre-up/oh-my-zsh.sh
 source $HOME/dev/dotfiles/hooks/post-up/make_rc_files.sh #run `make_syms` to build all the symlinked files correctly
+
+
+function prepushhook {
+  autocop
+  return_code=$?
+  if [[ $return_code -eq 1 ]]; then
+    echo "Rubocop failed during prepushhook. Exiting."
+  else
+    echo "Rubocop passed. Pushing up code!"
+    if [[ $1 = "am" ]]; then
+      git commit --amend --no-e && git push -f
+    else
+      git push
+    fi
+  fi
+}
