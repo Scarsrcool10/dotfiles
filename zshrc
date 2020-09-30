@@ -1,3 +1,4 @@
+#! /bin/bash
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
