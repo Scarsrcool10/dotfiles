@@ -1,0 +1,5 @@
+PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
+LIBRARY_PATH=":/usr/local/opt/openssl/lib/"
+CPPFLAGS="-I/usr/local/opt/openssl/include"
+LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
+BUNDLE_BUILD__MYSQL2: "--with-ldflags=-L/usr/local/opt/openssl/lib"

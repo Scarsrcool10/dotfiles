@@ -40,4 +40,17 @@ function make_syms(){
   else
     echo "${PRYRC} already exists."
   fi
+
+  BUNDLE_CONFIG=$HOME/.bundle/config
+  if [ "$1" = "force" ] || [ "$1" = "force_bundle_config" ]; then
+    ln -sf "$HOME"/dev/dotfiles/bundle_config "$BUNDLE_CONFIG"
+    echo "$BUNDLE_CONFIG has been updated"
+  else
+    if [ ! -f "$BUNDLE_CONFIG" ]; then
+      touch "$HOME/.bundle/config"
+      ln -sf "$HOME"/dev/dotfiles/bundle_config "$BUNDLE_CONFIG"
+    else
+      echo "$BUNDLE_CONFIG already exists"
+    fi
+  fi
 }
