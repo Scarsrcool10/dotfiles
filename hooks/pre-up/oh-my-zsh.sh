@@ -1,23 +1,38 @@
 #!/bin/bash
 function new_setup(){
   if [ ! "$(command -v zsh)" ]; then
-    echo "ZSH not found. Installing now."
-    brew install zsh
+    read -r -p "Would you like to install ZSH shell now, [y/n]?" RESPONSE
+    if [ "$RESPONSE" = "y" ]; then
+      echo "ZSH not found. Installing now."
+      brew install zsh
+    else
+      "Skipping ZSH installation..."
+    fi
   else
     echo "ZSH already exists."
   fi
 
-  if [ ! -e "$HOME"/.oh-my-zsh/ ]; then
-    echo "OH MY ZSH not found. Installing now."
-    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  if [ ! -e "$HOME"/.oh-my-zsh/ ] && [  "$(command -v zsh)" ]; then
+    read "RESPONSE? It looks like ZSH is installed, but not oh-my-zsh. Would you like to install it now, [y/n]?"
+    if [ "$RESPONSE" = "y" ]; then
+      echo "OH MY ZSH not found. Installing now."
+      curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+    else
+      echo "Skipping oh-my-zsh installation..."
+    fi
   else
     echo "OH MY ZSH already exists."
   fi
 
-  if [  "$(command -v zsh)" ] && [ ! "$0" ]; then
-    echo "ZSH installation found. Switching shell to ZSH now."
-    chsh -s /bin/zsh
-    exec "$SHELL" -l
+  if [  "$(command -v zsh)" ] && [ -n "$BASH_VERSION" ]; then
+    read -r -p "It looks like zsh is installed. Would you like to change shell to zsh now, [y/n]?" RESPONSE
+    if [ "$RESPONSE" = "y" ]; then
+      echo "ZSH installation found. Switching shell to ZSH now."
+      chsh -s /bin/zsh
+      exec "$SHELL" -l
+    else
+      echo "Leaving shell set as bash..."
+    fi
   fi
 
   if [ ! "$(command -v pry)" ]; then
