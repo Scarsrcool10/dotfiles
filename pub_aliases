@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # Best Aliases
 alias gst='git status'
 alias b='bundle exec'

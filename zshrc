@@ -1,3 +1,4 @@
+#! /bin/bash
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
@@ -114,10 +115,10 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+[[ -f ~/.pub_aliases ]] && source ~/.pub_aliases
+[[ -f ~/.priv_aliases ]] && source ~/.priv_aliases
+[[ -f ~/.exports ]] && source ~/.exports
 
-source ~/.pub_aliases
-source ~/.priv_aliases
-source ~/.exports
 source $HOME/dev/dotfiles/priv_functions.sh
 source $HOME/dev/dotfiles/hooks/pre-up/oh-my-zsh.sh
 source $HOME/dev/dotfiles/hooks/post-up/make_rc_files.sh #run `make_syms` to build all the symlinked files correctly
