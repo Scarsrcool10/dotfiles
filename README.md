@@ -1,18 +1,24 @@
 # dotfiles
 # Do the thang! WEE
-To utilize these awesomesauce dotfiles, do the following. 
+To utilize these awesomesauce dotfiles, do the following.
 
 1. clone down this repo at `$HOME/dev/`
-2. run `new_setup` to install all neccessary initial components and chsh to zsh
+2. run `source $HOME/dev/dotfiles/zshrc`
 3. run `make_syms` to build all the symlinks correctly.
-4. install your own oh-my-zsh theme, or run the powerline10k one installed here with `p10k configure`
+4. run `new_setup` to install all neccessary initial components and chsh to zsh
+5. install your own oh-my-zsh theme, or run the powerline10k one installed here with `p10k configure`
 
-What does this get you? oh baby, lots of stuff!.
+What does this get you? Oh baby, lots of stuff!. This will managed all your dotfiles for pry config, git config, bundle config, and aliases as well
+as install all of the following. You can skip the zsh and oh-my-zsh with prompts if you don't want those.
 
 1. zsh
 2. oh-my-zsh
 3. geckodriver
 4. pry
-5. symlinks
-6. aliases.
-7. much much more
+5. rbenv
+6. ruby 2.6.3
+7. mysql@5.7
+8. symlinks
+9. custom git config
+10. a ton of useful aliases.
+11. much much more

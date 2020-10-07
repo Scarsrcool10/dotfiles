@@ -1,6 +1,20 @@
 #!/bin/bash
 function make_syms(){
   GITFILE=$HOME/.gitconfig
+  if [ -n "$BASH_VERSION" ]; then
+    read -r -p "Please enter your git username now for git congfig setup:" UN_RESPONSE
+    read -r -p "Please enter your git email now for git config setup:" EMAIL_RESPONSE
+    export GIT_USER_NAME=$UN_RESPONSE GIT_USER_EMAIL=$EMAIL_RESPONSE
+    sed -i '' -e  "s/name = .*/name = $UN_RESPONSE/" "$HOME"/dev/dotfiles/gitconfig
+    sed -i '' -e  "s/email = .*/email = $EMAIL_RESPONSE/" "$HOME"/dev/dotfiles/gitconfig
+  else
+    read "UN_RESPONSE? Please enter your git username now for git config setup:"
+    read "EMAIL_RESPONSE? Please enter your git email now for git config setup:"
+    export GIT_USER_NAME=$UN_RESPONSE GIT_USER_EMAIL=$EMAIL_RESPONSE
+    sed -i '' -e  "s/name = .*/name = $UN_RESPONSE/" "$HOME"/dev/dotfiles/gitconfig
+    sed -i '' -e  "s/email = .*/email = $EMAIL_RESPONSE/" "$HOME"/dev/dotfiles/gitconfig
+  fi
+
   if [ "$1" = "force" ] || [ "$1" = "force_gitconfig" ]; then
     ln -sf "$HOME"/dev/dotfiles/gitconfig "$GITFILE"
     echo "$GITFILE has been updated."
