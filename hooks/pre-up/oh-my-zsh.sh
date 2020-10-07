@@ -49,6 +49,32 @@ function new_setup(){
     echo "GEKODRIVER already exists."
   fi
 
+  if [ ! "$(command -v pyenv)" ]; then
+    echo "PYENV not found. Installing now."
+    brew install pyenv
+  else
+    echo "PYENV already exists."
+  fi
+
+  P10k_THEME="$HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel9k.zsh-theme"
+  if [ -n "$BASH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
+    read -r -p "Powerlevel10k theme is not currently installed. Would you like to install it now?" RESPONSE
+    if [ "$RESPONSE" = "y" ]; then
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
+    else
+      echo "Skipping powerlevel10k installation..."
+    fi
+  elif [ -n "$ZSH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
+    read "RESPONSE? Powerlevel10k theme is not currently installed. Would you like to install it now?"
+    if [ "$RESPONSE" = "y" ]; then
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
+    else
+      echo "Skipping powerlevel10k installation..."
+    fi
+  else
+    echo "Powerlevel10k custom theme is already installed."
+  fi
+
   if [ ! "$(command -v rbenv)" ]; then
     echo "RBENV not found. Installing now."
     brew install rbenv
