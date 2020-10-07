@@ -51,7 +51,7 @@ function new_setup(){
 
   if [ ! "$(command -v pyenv)" ]; then
     echo "PYENV not found. Installing now."
-    brew install pyenv
+    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   else
     echo "PYENV already exists."
   fi
