@@ -58,14 +58,14 @@ function new_setup(){
 
   P10k_THEME="$HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel9k.zsh-theme"
   if [ -n "$BASH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
-    read -r -p "Powerlevel10k theme is not currently installed. Would you like to install it now?" RESPONSE
+    read -r -p "Powerlevel10k theme is not currently installed. Would you like to install it now [y/n]?" RESPONSE
     if [ "$RESPONSE" = "y" ]; then
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
     else
       echo "Skipping powerlevel10k installation..."
     fi
   elif [ -n "$ZSH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
-    read "RESPONSE? Powerlevel10k theme is not currently installed. Would you like to install it now?"
+    read "RESPONSE? Powerlevel10k theme is not currently installed. Would you like to install it now [y/n]?"
     if [ "$RESPONSE" = "y" ]; then
       git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
     else
