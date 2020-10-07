@@ -4,7 +4,7 @@ To utilize these awesomesauce dotfiles, do the following.
 
 1. clone down this repo at `$HOME/dev/`
 2. run `source $HOME/dev/dotfiles/zshrc`
-3. run `make_syms` to build all the symlinks correctly.
+3. run `make_syms` to build all the symlinks correctly. There are force flags for each block here if you need. Look at `hooks/post-up/make_rc_files.sh`
 4. run `new_setup` to install all neccessary initial components and chsh to zsh
 5. install your own oh-my-zsh theme, or run the powerline10k one installed here with `p10k configure`
 
