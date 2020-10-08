@@ -24,6 +24,25 @@ function new_setup(){
     echo "OH MY ZSH already exists."
   fi
 
+  P10k_THEME="$HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel9k.zsh-theme"
+  if [ -n "$BASH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
+    read -r -p "Powerlevel10k theme is not currently installed. Would you like to install it now [y/n]?" RESPONSE
+    if [ "$RESPONSE" = "y" ]; then
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
+    else
+      echo "Skipping powerlevel10k installation..."
+    fi
+  elif [ -n "$ZSH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
+    read "RESPONSE? Powerlevel10k theme is not currently installed. Would you like to install it now [y/n]?"
+    if [ "$RESPONSE" = "y" ]; then
+      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
+    else
+      echo "Skipping powerlevel10k installation..."
+    fi
+  else
+    echo "Powerlevel10k custom theme is already installed."
+  fi
+
   if [  "$(command -v zsh)" ] && [ -n "$BASH_VERSION" ]; then
     read -r -p "It looks like zsh is installed. Would you like to change shell to zsh now, [y/n]?" RESPONSE
     if [ "$RESPONSE" = "y" ]; then
@@ -56,23 +75,18 @@ function new_setup(){
     echo "PYENV already exists."
   fi
 
-  P10k_THEME="$HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel9k.zsh-theme"
-  if [ -n "$BASH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
-    read -r -p "Powerlevel10k theme is not currently installed. Would you like to install it now [y/n]?" RESPONSE
-    if [ "$RESPONSE" = "y" ]; then
-      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
-    else
-      echo "Skipping powerlevel10k installation..."
-    fi
-  elif [ -n "$ZSH_VERSION" ] && [ ! -f "$P10k_THEME" ]; then
-    read "RESPONSE? Powerlevel10k theme is not currently installed. Would you like to install it now [y/n]?"
-    if [ "$RESPONSE" = "y" ]; then
-      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
-    else
-      echo "Skipping powerlevel10k installation..."
-    fi
+  if [ ! "$(command -v python)" ]; then
+    echo "Python not found. Installing now."
+    pyenv install 3.8.2
   else
-    echo "Powerlevel10k custom theme is already installed."
+    echo "Python already exists"
+  fi
+
+  if [ ! "$(command -v ansible)" ]; then
+    echo "Ansible not found. Installing now."
+    pip install ansible
+  else
+    echo "Ansible already exists."
   fi
 
   if [ ! "$(command -v rbenv)" ]; then
