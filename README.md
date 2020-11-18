@@ -18,7 +18,8 @@ as install all of the following. You can skip the zsh and oh-my-zsh with prompts
 5. rbenv
 6. ruby 2.6.3
 7. mysql@5.7
-8. symlinks
-9. custom git config
-10. a ton of useful aliases.
-11. much much more
+8. i2cssh
+9. symlinks
+10. custom git config
+11. a ton of useful aliases.
+12. much much more
