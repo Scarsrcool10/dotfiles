@@ -109,4 +109,11 @@ function new_setup(){
   else
     echo "MYSQL already exists."
   fi
+
+  if [ ! "$(command -v i2cssh)" ]; then
+    echo "i2cssh not found. Installing now."
+    gem install i2cssh
+  else
+    echo "i2cssh already installed."
+  fi
 }
