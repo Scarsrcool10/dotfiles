@@ -78,6 +78,7 @@ function new_setup(){
   if [ ! "$(command -v python)" ]; then
     echo "Python not found. Installing now."
     pyenv install 3.8.2
+    pyenv global 3.8.2
   else
     echo "Python already exists"
   fi
@@ -99,6 +100,7 @@ function new_setup(){
   if [ ! "$(command -v ruby)" ]; then
     echo "RUBY not found. Installing now."
     rbenv install '2.6.3'
+    rbenv global '2.6.3'
   else
     echo "RUBY already exists."
   fi
