@@ -9,7 +9,7 @@ This repo assumes two things.
 
 
 # Installation:
-To utilize these awesomesauce dotfiles, do the following.
+To utilize these dotfiles, do the following.
 
 1. clone down this repo at `$HOME/dev/`
 2. run `source $HOME/dev/dotfiles/zshrc`
