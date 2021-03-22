@@ -1,5 +1,11 @@
 # dotfiles
 # Do the thang! WEE
+
+# NOTE
+This repo assumes two things.
+1. Must be using iTerm2. Mac default terminal doesn't work well with this custom bash.
+2. Working dir needs to be `$HOME/dev`
+
 To utilize these awesomesauce dotfiles, do the following.
 
 1. clone down this repo at `$HOME/dev/`
