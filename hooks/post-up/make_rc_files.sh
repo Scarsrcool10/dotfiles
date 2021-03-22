@@ -62,6 +62,19 @@ function make_syms(){
     fi
   fi
 
+  ZSHRC=$HOME/.zshrc
+  if [ "$1" = "force" ] || [ "$1" = "force_zshrc" ]; then
+    ln -sf "$HOME"/dev/dotfiles/zshrc "$ZSHRC"
+    echo "$ZSHRC has been updated."
+  else
+    if [ ! -f "$ZSHRC" ]; then
+      touch "$HOME/.zshrc"
+      ln -sf "$HOME"/dev/dotfiles/zshrc "$ZSHRC"
+    else
+      echo "$ZSHRC already exists. Run with 'force' or 'force_rcrc' to force link anyway."
+    fi
+  fi
+
   PRYRC=$HOME/.pryrc
   if [ "$1" = "force" ] || [ "$1" = "force_pryrc" ]; then
     ln -sf "$HOME"/dev/dotfiles/pryrc "$PRYRC"
