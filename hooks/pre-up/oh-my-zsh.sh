@@ -83,6 +83,21 @@ function new_setup(){
     echo "Python already exists"
   fi
 
+  if [ ! "$(command -v pip)" ]; then
+    echo "Pip not found. Installing now."
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python get-pip.py
+  else
+    echo "Pip already exists"
+  fi
+
+  if [ ! "$(command -v passlib)" ]; then
+    echo "Passlib not found. Installing now."
+    pip install passlib
+  else
+    echo "Passlib already exists"
+  fi
+
   if [ ! "$(command -v ansible)" ]; then
     echo "Ansible not found. Installing now."
     pip install ansible
