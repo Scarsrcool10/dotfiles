@@ -26,9 +26,12 @@ as install all of the following. You can skip the zsh and oh-my-zsh with prompts
 4. pry
 5. rbenv
 6. ruby 2.6.3
-7. mysql@5.7
-8. i2cssh
-9. symlinks
-10. custom git config
-11. a ton of useful aliases.
-12. much much more
+7. pyenv
+8. python 3.8.2
+9. ansible
+10. mysql@5.7
+11. i2cssh
+12. symlinks
+13. custom git config
+14. a ton of useful aliases.
+15. much much more
