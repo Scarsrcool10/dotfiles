@@ -133,4 +133,11 @@ function new_setup(){
   else
     echo "i2cssh already installed."
   fi
+
+  if [ ! "$(command -v grc)" ]; then
+    echo "GRC not found. Installing now."
+    brew install grc
+  else
+    echo "PYENV already exists."
+  fi
 }
