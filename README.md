@@ -31,7 +31,8 @@ as install all of the following. You can skip the zsh and oh-my-zsh with prompts
 9. ansible
 10. mysql@5.7
 11. i2cssh
-12. symlinks
-13. custom git config
-14. a ton of useful aliases.
-15. much much more
+12. GRC for pretty dig commands
+13. symlinks
+14. custom git config
+15. a ton of useful aliases.
+16. much much more
