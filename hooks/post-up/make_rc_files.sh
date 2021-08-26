@@ -94,6 +94,7 @@ function make_syms(){
     echo "$BUNDLE_CONFIG has been updated."
   else
     if [ ! -f "$BUNDLE_CONFIG" ]; then
+      mkdir -p $HOME/.bundle/
       touch "$HOME/.bundle/config"
       ln -sf "$HOME"/dev/dotfiles/bundle_config "$BUNDLE_CONFIG"
     else
